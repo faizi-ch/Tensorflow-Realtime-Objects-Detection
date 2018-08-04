@@ -19,6 +19,8 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.os.Trace;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -42,34 +44,43 @@ public class TensorFlowYoloDetector implements Classifier {
   // TODO(andrewharp): allow loading anchors and classes
   // from files.
   private static final double[] ANCHORS = {
-    1.08, 1.19,
-    3.42, 4.41,
-    6.63, 11.38,
-    9.42, 5.11,
-    16.62, 10.52
+          1.08, 1.19,
+          3.42, 4.41,
+          6.63, 11.38,
+          9.42, 5.11,
+          16.62, 10.52
   };
 
+  /*private static final String[] LABELS = {
+          "diamond",
+          "Tree",
+          "Pole",
+          "Palm Tree",
+          "Street Line",
+          "Traffic Sign"
+  };*/
+
   private static final String[] LABELS = {
-    "aeroplane",
-    "bicycle",
-    "bird",
-    "boat",
-    "bottle",
-    "bus",
-    "car",
-    "cat",
-    "chair",
-    "cow",
-    "diningtable",
-    "dog",
-    "horse",
-    "motorbike",
-    "person",
-    "pottedplant",
-    "sheep",
-    "sofa",
-    "train",
-    "tvmonitor"
+          "aeroplane",
+          "bicycle",
+          "bird",
+          "boat",
+          "bottle",
+          "bus",
+          "car",
+          "cat",
+          "chair",
+          "cow",
+          "diningtable",
+          "dog",
+          "horse",
+          "motorbike",
+          "person",
+          "pottedplant",
+          "sheep",
+          "sofa",
+          "train",
+          "tvmonitor"
   };
 
   // Config values.
@@ -89,12 +100,12 @@ public class TensorFlowYoloDetector implements Classifier {
 
   /** Initializes a native TensorFlow session for classifying images. */
   public static Classifier create(
-      final AssetManager assetManager,
-      final String modelFilename,
-      final int inputSize,
-      final String inputName,
-      final String outputName,
-      final int blockSize) {
+          final AssetManager assetManager,
+          final String modelFilename,
+          final int inputSize,
+          final String inputName,
+          final String outputName,
+          final int blockSize) {
     TensorFlowYoloDetector d = new TensorFlowYoloDetector();
     d.inputName = inputName;
     d.inputSize = inputSize;
@@ -169,29 +180,29 @@ public class TensorFlowYoloDetector implements Classifier {
     final int gridWidth = bitmap.getWidth() / blockSize;
     final int gridHeight = bitmap.getHeight() / blockSize;
     final float[] output =
-        new float[gridWidth * gridHeight * (NUM_CLASSES + 5) * NUM_BOXES_PER_BLOCK];
+            new float[gridWidth * gridHeight * (NUM_CLASSES + 5) * NUM_BOXES_PER_BLOCK];
     inferenceInterface.fetch(outputNames[0], output);
     Trace.endSection();
 
     // Find the best detections.
     final PriorityQueue<Recognition> pq =
-        new PriorityQueue<Recognition>(
-            1,
-            new Comparator<Recognition>() {
-              @Override
-              public int compare(final Recognition lhs, final Recognition rhs) {
-                // Intentionally reversed to put high confidence at the head of the queue.
-                return Float.compare(rhs.getConfidence(), lhs.getConfidence());
-              }
-            });
+            new PriorityQueue<Recognition>(
+                    1,
+                    new Comparator<Recognition>() {
+                      @Override
+                      public int compare(final Recognition lhs, final Recognition rhs) {
+                        // Intentionally reversed to put high confidence at the head of the queue.
+                        return Float.compare(rhs.getConfidence(), lhs.getConfidence());
+                      }
+                    });
 
     for (int y = 0; y < gridHeight; ++y) {
       for (int x = 0; x < gridWidth; ++x) {
         for (int b = 0; b < NUM_BOXES_PER_BLOCK; ++b) {
           final int offset =
-              (gridWidth * (NUM_BOXES_PER_BLOCK * (NUM_CLASSES + 5))) * y
-                  + (NUM_BOXES_PER_BLOCK * (NUM_CLASSES + 5)) * x
-                  + (NUM_CLASSES + 5) * b;
+                  (gridWidth * (NUM_BOXES_PER_BLOCK * (NUM_CLASSES + 5))) * y
+                          + (NUM_BOXES_PER_BLOCK * (NUM_CLASSES + 5)) * x
+                          + (NUM_CLASSES + 5) * b;
 
           final float xPos = (x + expit(output[offset + 0])) * blockSize;
           final float yPos = (y + expit(output[offset + 1])) * blockSize;
@@ -199,12 +210,15 @@ public class TensorFlowYoloDetector implements Classifier {
           final float w = (float) (Math.exp(output[offset + 2]) * ANCHORS[2 * b + 0]) * blockSize;
           final float h = (float) (Math.exp(output[offset + 3]) * ANCHORS[2 * b + 1]) * blockSize;
 
+          //size:
+          Log.i("DIMENSIONS", w+"..."+h);
+
           final RectF rect =
-              new RectF(
-                  Math.max(0, xPos - w / 2),
-                  Math.max(0, yPos - h / 2),
-                  Math.min(bitmap.getWidth() - 1, xPos + w / 2),
-                  Math.min(bitmap.getHeight() - 1, yPos + h / 2));
+                  new RectF(
+                          Math.max(0, xPos - w / 2),
+                          Math.max(0, yPos - h / 2),
+                          Math.min(bitmap.getWidth() - 1, xPos + w / 2),
+                          Math.min(bitmap.getHeight() - 1, yPos + h / 2));
           final float confidence = expit(output[offset + 4]);
 
           int detectedClass = -1;
@@ -223,11 +237,14 @@ public class TensorFlowYoloDetector implements Classifier {
             }
           }
 
+          //String ww[] = Float.toString(w).split(".");
+          //String hh[] = Float.toString(h).split(".");
+
           final float confidenceInClass = maxClass * confidence;
           if (confidenceInClass > 0.01) {
             LOGGER.i(
-                "%s (%d) %f %s", LABELS[detectedClass], detectedClass, confidenceInClass, rect);
-            pq.add(new Recognition("" + offset, LABELS[detectedClass], confidenceInClass, rect));
+                    "%s (%d) %f %s", LABELS[detectedClass], detectedClass, confidenceInClass, rect);
+            pq.add(new Recognition("" + offset, LABELS[detectedClass]+"-"+w+"-"+h, confidenceInClass, rect));
           }
         }
       }

@@ -59,10 +59,10 @@ public class MultiBoxTracker {
   private static final float MIN_CORRELATION = 0.3f;
 
   private static final int[] COLORS = {
-    Color.BLUE, Color.RED, Color.GREEN, Color.YELLOW, Color.CYAN, Color.MAGENTA, Color.WHITE,
-    Color.parseColor("#55FF55"), Color.parseColor("#FFA500"), Color.parseColor("#FF8888"),
-    Color.parseColor("#AAAAFF"), Color.parseColor("#FFFFAA"), Color.parseColor("#55AAAA"),
-    Color.parseColor("#AA33AA"), Color.parseColor("#0D0068")
+          Color.BLUE, Color.RED, Color.GREEN, Color.YELLOW, Color.CYAN, Color.MAGENTA, Color.WHITE,
+          Color.parseColor("#55FF55"), Color.parseColor("#FFA500"), Color.parseColor("#FF8888"),
+          Color.parseColor("#AAAAFF"), Color.parseColor("#FFFFAA"), Color.parseColor("#55AAAA"),
+          Color.parseColor("#AA33AA"), Color.parseColor("#0D0068")
   };
 
   private final Queue<Integer> availableColors = new LinkedList<Integer>();
@@ -108,8 +108,8 @@ public class MultiBoxTracker {
     boxPaint.setStrokeMiter(100);
 
     textSizePx =
-        TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, context.getResources().getDisplayMetrics());
+            TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, TEXT_SIZE_DIP, context.getResources().getDisplayMetrics());
     borderedText = new BorderedText(textSizePx);
   }
 
@@ -155,7 +155,7 @@ public class MultiBoxTracker {
   }
 
   public synchronized void trackResults(
-      final List<Recognition> results, final byte[] frame, final long timestamp) {
+          final List<Recognition> results, final byte[] frame, final long timestamp) {
     logger.i("Processing %d results from %d", results.size(), timestamp);
     processResults(timestamp, results, frame);
   }
@@ -163,21 +163,21 @@ public class MultiBoxTracker {
   public synchronized void draw(final Canvas canvas) {
     final boolean rotated = sensorOrientation % 180 == 90;
     final float multiplier =
-        Math.min(canvas.getHeight() / (float) (rotated ? frameWidth : frameHeight),
-                 canvas.getWidth() / (float) (rotated ? frameHeight : frameWidth));
+            Math.min(canvas.getHeight() / (float) (rotated ? frameWidth : frameHeight),
+                    canvas.getWidth() / (float) (rotated ? frameHeight : frameWidth));
     frameToCanvasMatrix =
-        ImageUtils.getTransformationMatrix(
-            frameWidth,
-            frameHeight,
-            (int) (multiplier * (rotated ? frameHeight : frameWidth)),
-            (int) (multiplier * (rotated ? frameWidth : frameHeight)),
-            sensorOrientation,
-            false);
+            ImageUtils.getTransformationMatrix(
+                    frameWidth,
+                    frameHeight,
+                    (int) (multiplier * (rotated ? frameHeight : frameWidth)),
+                    (int) (multiplier * (rotated ? frameWidth : frameHeight)),
+                    sensorOrientation,
+                    false);
     for (final TrackedRecognition recognition : trackedObjects) {
       final RectF trackedPos =
-          (objectTracker != null)
-              ? recognition.trackedObject.getTrackedPositionInPreviewFrame()
-              : new RectF(recognition.location);
+              (objectTracker != null)
+                      ? recognition.trackedObject.getTrackedPositionInPreviewFrame()
+                      : new RectF(recognition.location);
 
       getFrameToCanvasMatrix().mapRect(trackedPos);
       boxPaint.setColor(recognition.color);
@@ -185,23 +185,61 @@ public class MultiBoxTracker {
       final float cornerSize = Math.min(trackedPos.width(), trackedPos.height()) / 8.0f;
       canvas.drawRoundRect(trackedPos, cornerSize, cornerSize, boxPaint);
 
+      //F=(PixelWidth * D) / Real Width
+
+      double realWithLaptop=13.4;
+      double fL=(430 * 17) / realWithLaptop;
+
+      double pxWidth=1;
+
+      String size[]=null;
+      String w[]=null,h[]=null;
+      if (!TextUtils.isEmpty(recognition.title))
+      {
+        size=recognition.title.split("-");
+        w=size[1].split(".");
+        if (size.length>2)
+          h=size[2].split(".");
+
+        pxWidth=Double.parseDouble(size[1]);
+      }
+
       final String labelString =
-          !TextUtils.isEmpty(recognition.title)
-              ? String.format("%s %.2f", recognition.title, recognition.detectionConfidence)
-              : String.format("%.2f", recognition.detectionConfidence);
+              !TextUtils.isEmpty(recognition.title)
+                      ? String.format("%s %.2f", size[0], recognition.detectionConfidence)
+                      : String.format("%.2f", recognition.detectionConfidence);
+      //double distancei = (2*3.14 * 180)/(trackedPos.width()+trackedPos.width()*360)*1000 + 3;
+      //double distance = Math.floor(distancei/2);
+
+
+      //D’ = (W x F) / P
+      double distance=(realWithLaptop * fL) /pxWidth;
+
       borderedText.drawText(canvas, trackedPos.left + cornerSize, trackedPos.bottom, labelString);
+      try
+      {
+        //borderedText.drawText(canvas, trackedPos.left + cornerSize, trackedPos.top, "W:"+size[1]+" H:"+size[2]);
+        //borderedText.drawText(canvas, trackedPos.left + cornerSize, trackedPos.left, "H:"+size[2]);
+        //if (!TextUtils.isEmpty(recognition.title) && recognition.title=="tvmonitor")
+        borderedText.drawText(canvas, trackedPos.left + cornerSize, trackedPos.top, Double.toString(distance));
+      }
+      catch (Exception e)
+      {
+
+      }
+
     }
   }
 
   private boolean initialized = false;
 
   public synchronized void onFrame(
-      final int w,
-      final int h,
-      final int rowStride,
-      final int sensorOrientation,
-      final byte[] frame,
-      final long timestamp) {
+          final int w,
+          final int h,
+          final int rowStride,
+          final int sensorOrientation,
+          final byte[] frame,
+          final long timestamp) {
     if (objectTracker == null && !initialized) {
       ObjectTracker.clearInstance();
 
@@ -214,8 +252,8 @@ public class MultiBoxTracker {
 
       if (objectTracker == null) {
         String message =
-            "Object tracking support not found. "
-                + "See tensorflow/examples/android/README.md for details.";
+                "Object tracking support not found. "
+                        + "See tensorflow/examples/android/README.md for details.";
         //Toast.makeText(context, message, Toast.LENGTH_LONG).show();
         logger.e(message);
       }
@@ -229,7 +267,7 @@ public class MultiBoxTracker {
 
     // Clean up any objects not worth tracking any more.
     final LinkedList<TrackedRecognition> copyList =
-        new LinkedList<TrackedRecognition>(trackedObjects);
+            new LinkedList<TrackedRecognition>(trackedObjects);
     for (final TrackedRecognition recognition : copyList) {
       final ObjectTracker.TrackedObject trackedObject = recognition.trackedObject;
       final float correlation = trackedObject.getCurrentCorrelation();
@@ -244,7 +282,7 @@ public class MultiBoxTracker {
   }
 
   private void processResults(
-      final long timestamp, final List<Recognition> results, final byte[] originalFrame) {
+          final long timestamp, final List<Recognition> results, final byte[] originalFrame) {
     final List<Pair<Float, Recognition>> rectsToTrack = new LinkedList<Pair<Float, Recognition>>();
 
     screenRects.clear();
@@ -260,7 +298,7 @@ public class MultiBoxTracker {
       rgbFrameToScreen.mapRect(detectionScreenRect, detectionFrameRect);
 
       logger.v(
-          "Result! Frame: " + result.getLocation() + " mapped to screen:" + detectionScreenRect);
+              "Result! Frame: " + result.getLocation() + " mapped to screen:" + detectionScreenRect);
 
       screenRects.add(new Pair<Float, RectF>(result.getConfidence(), detectionScreenRect));
 
@@ -302,14 +340,14 @@ public class MultiBoxTracker {
   }
 
   private void handleDetection(
-      final byte[] frameCopy, final long timestamp, final Pair<Float, Recognition> potential) {
+          final byte[] frameCopy, final long timestamp, final Pair<Float, Recognition> potential) {
     final ObjectTracker.TrackedObject potentialObject =
-        objectTracker.trackObject(potential.second.getLocation(), timestamp, frameCopy);
+            objectTracker.trackObject(potential.second.getLocation(), timestamp, frameCopy);
 
     final float potentialCorrelation = potentialObject.getCurrentCorrelation();
     logger.v(
-        "Tracked object went from %s to %s with correlation %.2f",
-        potential.second, potentialObject.getTrackedPositionInPreviewFrame(), potentialCorrelation);
+            "Tracked object went from %s to %s with correlation %.2f",
+            potential.second, potentialObject.getTrackedPositionInPreviewFrame(), potentialCorrelation);
 
     if (potentialCorrelation < MARGINAL_CORRELATION) {
       logger.v("Correlation too low to begin tracking %s.", potentialObject);
@@ -342,7 +380,7 @@ public class MultiBoxTracker {
       // recognition needs to be removed and possibly replaced with the new one.
       if (intersects && intersectOverUnion > MAX_OVERLAP) {
         if (potential.first < trackedRecognition.detectionConfidence
-            && trackedRecognition.trackedObject.getCurrentCorrelation() > MARGINAL_CORRELATION) {
+                && trackedRecognition.trackedObject.getCurrentCorrelation() > MARGINAL_CORRELATION) {
           // If track for the existing object is still going strong and the detection score was
           // good, reject this new object.
           potentialObject.stopTracking();
@@ -367,7 +405,7 @@ public class MultiBoxTracker {
       for (final TrackedRecognition candidate : trackedObjects) {
         if (candidate.detectionConfidence < potential.first) {
           if (recogToReplace == null
-              || candidate.detectionConfidence < recogToReplace.detectionConfidence) {
+                  || candidate.detectionConfidence < recogToReplace.detectionConfidence) {
             // Save it so that we use this color for the new object.
             recogToReplace = candidate;
           }
@@ -384,10 +422,10 @@ public class MultiBoxTracker {
     // Remove everything that got intersected.
     for (final TrackedRecognition trackedRecognition : removeList) {
       logger.v(
-          "Removing tracked object %s with detection confidence %.2f, correlation %.2f",
-          trackedRecognition.trackedObject,
-          trackedRecognition.detectionConfidence,
-          trackedRecognition.trackedObject.getCurrentCorrelation());
+              "Removing tracked object %s with detection confidence %.2f, correlation %.2f",
+              trackedRecognition.trackedObject,
+              trackedRecognition.detectionConfidence,
+              trackedRecognition.trackedObject.getCurrentCorrelation());
       trackedRecognition.trackedObject.stopTracking();
       trackedObjects.remove(trackedRecognition);
       if (trackedRecognition != recogToReplace) {
@@ -403,11 +441,11 @@ public class MultiBoxTracker {
 
     // Finally safe to say we can track this object.
     logger.v(
-        "Tracking object %s (%s) with detection confidence %.2f at position %s",
-        potentialObject,
-        potential.second.getTitle(),
-        potential.first,
-        potential.second.getLocation());
+            "Tracking object %s (%s) with detection confidence %.2f at position %s",
+            potentialObject,
+            potential.second.getTitle(),
+            potential.first,
+            potential.second.getLocation());
     final TrackedRecognition trackedRecognition = new TrackedRecognition();
     trackedRecognition.detectionConfidence = potential.first;
     trackedRecognition.trackedObject = potentialObject;
@@ -415,7 +453,7 @@ public class MultiBoxTracker {
 
     // Use the color from a replaced object before taking one from the color queue.
     trackedRecognition.color =
-        recogToReplace != null ? recogToReplace.color : availableColors.poll();
+            recogToReplace != null ? recogToReplace.color : availableColors.poll();
     trackedObjects.add(trackedRecognition);
   }
 }
