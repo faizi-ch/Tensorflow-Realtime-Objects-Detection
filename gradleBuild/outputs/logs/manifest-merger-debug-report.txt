@@ -1,0 +1,76 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:18:1-48:12
+MERGED from [org.tensorflow:tensorflow-android:1.6.0] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\tensorflow-android-1.6.0.aar\9ccf64e560c4c557f7d1027a055948e8\AndroidManifest.xml:2:1-8:12
+MERGED from [com.specyci:residemenu:1.6] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\residemenu-1.6.aar\e0dc03de81ec1054e8ffc1ab900f1c82\AndroidManifest.xml:2:1-11:12
+MERGED from [com.orhanobut:dialogplus:1.11] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\dialogplus-1.11.aar\e2f931d122d341e00fbab2914eccc4d4\AndroidManifest.xml:2:1-10:12
+	package
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:19:5-33
+	xmlns:android
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:18:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:21:5-65
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:21:22-62
+uses-feature#android.hardware.camera
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:22:5-60
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:22:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:23:5-70
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:23:19-67
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:24:5-80
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:24:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:25:5-71
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:25:22-68
+uses-sdk
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:27:5-29:41
+MERGED from [com.specyci:residemenu:1.6] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\residemenu-1.6.aar\e0dc03de81ec1054e8ffc1ab900f1c82\AndroidManifest.xml:7:5-9:41
+MERGED from [com.specyci:residemenu:1.6] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\residemenu-1.6.aar\e0dc03de81ec1054e8ffc1ab900f1c82\AndroidManifest.xml:7:5-9:41
+MERGED from [com.orhanobut:dialogplus:1.11] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\dialogplus-1.11.aar\e2f931d122d341e00fbab2914eccc4d4\AndroidManifest.xml:6:5-8:41
+MERGED from [com.orhanobut:dialogplus:1.11] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\dialogplus-1.11.aar\e2f931d122d341e00fbab2914eccc4d4\AndroidManifest.xml:6:5-8:41
+	android:targetSdkVersion
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:29:9-38
+	android:minSdkVersion
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:28:9-35
+application
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:31:5-46:19
+MERGED from [org.tensorflow:tensorflow-android:1.6.0] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\tensorflow-android-1.6.0.aar\9ccf64e560c4c557f7d1027a055948e8\AndroidManifest.xml:5:5-6:19
+MERGED from [org.tensorflow:tensorflow-android:1.6.0] C:\Users\Faizi\.gradle\caches\transforms-1\files-1.1\tensorflow-android-1.6.0.aar\9ccf64e560c4c557f7d1027a055948e8\AndroidManifest.xml:5:5-6:19
+	android:label
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:33:9-41
+	android:debuggable
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:32:9-34
+	android:icon
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:34:9-38
+	android:allowBackup
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:31:18-44
+	android:theme
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:35:9-45
+activity#org.tensorflow.UPM.DetectorActivity
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:37:9-44:20
+	android:screenOrientation
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:38:13-49
+	android:label
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:39:13-45
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:37:19-69
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:41:17-69
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:42:27-74
+uses-permission#android.permission.READ_PHONE_STATE
+IMPLIED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:18:1-48:12 reason: tensorflow.contrib.android has a targetSdkVersion < 4
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+IMPLIED from C:\Users\Faizi\Desktop\android\AndroidManifest.xml:18:1-48:12 reason: tensorflow.contrib.android requested WRITE_EXTERNAL_STORAGE

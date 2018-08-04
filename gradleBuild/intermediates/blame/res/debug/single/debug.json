@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_dialog_list.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\layout\\dialog_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_info.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-xxhdpi\\ic_action_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_logo.jpg.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_about_footer.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\about_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_settings_footer.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\settings_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_slide_out_bottom.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_icon_calendar.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\icon_calendar.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_about_content.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\about_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_icon_home.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\icon_home.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_residemenu.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\layout\\residemenu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_launcher.png.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_slide_in_bottom.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_launcher.png.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_fade_out_center.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\fade_out_center.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_fade_in_center.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\fade_in_center.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_settings_content.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\settings_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\animator_color_animation.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\animator\\color_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_residemenu_item.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\layout\\residemenu_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment_stylize.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\camera_connection_fragment_stylize.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_info.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\ic_action_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_activity_camera.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\camera_connection_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_icon_settings.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\icon_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_info.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-mdpi\\ic_action_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_base_container.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\layout\\base_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_border.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_dialog_view.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\layout\\dialog_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_launcher.png.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\drawable-hdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_info.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-xhdpi\\ic_action_info.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_corner_background.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\corner_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_slide_out_top.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\slide_out_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\anim_slide_in_top.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\anim\\slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_shadow.png.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\drawable-hdpi-v4\\shadow.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_tile.9.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\tile.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_ic_launcher.png.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\drawable-ldpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_about_header.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\about_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_icon_profile.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\icon_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable_menu_background.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable\\menu_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_icon.png.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_settings_header.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\settings_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_camera_connection_fragment_tracking.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\layout\\camera_connection_fragment_tracking.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\drawable-hdpi_selector_bg_button.xml.flat",
+        "source": "C:\\Users\\Faizi\\Desktop\\android\\res\\drawable-hdpi\\selector_bg_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\debug\\layout_dialog_grid.xml.flat",
+        "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\layout\\dialog_grid.xml"
+    }
+]

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2016 The TensorFlow Authors. All Rights Reserved.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+    <string name="description_info">Info</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="dialog_title">Dialog setup:</string>
+    <string name="footer">Footer</string>
+    <string name="header">Header</string>
+    <string name="header_title">Settings</string>
+    <string name="header_sample">OBJECT DETECTION</string>
+    <string name="footer_button_close">CLOSE</string>
+    <string name="footer_button_confirm">CONFIRM</string>
+    <string name="footer_sample">SAMPLE FOOTER</string>
+    <string name="button_bottom">Bottom</string>
+    <string name="button_center">Center</string>
+    <string name="button_top">Top</string>
+    <string name="google_plus_title">Google Plus</string>
+    <string name="google_maps_title">Maps</string>
+    <string name="google_messenger_title">Messenger</string>
+    <string name="question_distance">How far away from the device should it be able to detect the objects?</string>
+    <string name="objects">Select the objects to detect:</string>
+    <string name="button_like">I like it</string>
+    <string name="button_love">I love it</string>
+    <string name="view_holder">View Holder</string>
+    <string name="list_holder">List Holder</string>
+    <string name="grid_holder">Grid Holder</string>
+    <string name="show_header">Show header</string>
+    <string name="show_footer">Show footer</string>
+    <string name="about_text">This application was created for research purpose by Department of Civil Engineering and Geospatial Information Science Research Centre (GISRC), Faculty of Engineering, University Putra Malaysia (UPM), 43400 Serdang, Malaysia</string>
+
+</resources>

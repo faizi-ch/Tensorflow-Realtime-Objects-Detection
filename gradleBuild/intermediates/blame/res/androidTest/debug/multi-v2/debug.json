@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Faizi\\Desktop\\android\\gradleBuild\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\residemenu-1.6.aar\\e0dc03de81ec1054e8ffc1ab900f1c82\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "176",
+                        "endColumns": "47",
+                        "endOffsets": "219"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "309",
+                        "endColumns": "47",
+                        "endOffsets": "352"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Faizi\\.gradle\\caches\\transforms-1\\files-1.1\\dialogplus-1.11.aar\\e2f931d122d341e00fbab2914eccc4d4\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "4,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "186,247,435,632",
+                        "endColumns": "60,56,63,71",
+                        "endOffsets": "242,299,494,699"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,116,173,237",
+                        "endColumns": "60,56,63,71",
+                        "endOffsets": "111,168,232,304"
+                    }
+                }
+            ]
+        }
+    ]
+}
